@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ferramentas e especialidades OSINT da Scorpion Intelligence.">
+    <title>Ferramentas | Scorpion Intelligence</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a class="nav-logo" href="index.html#home">
+                    <i class="fas fa-search"></i>
+                    <span>SCORPION</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html#home" class="nav-link">Início</a></li>
+                    <li><a href="index.html#about" class="nav-link">Sobre</a></li>
+                    <li><a href="index.html#services" class="nav-link">Serviços</a></li>
+                    <li><a href="ferramentas.html" class="nav-link">Ferramentas</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contato</a></li>
+                </ul>
+                <div class="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" style="min-height: 60vh;">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="highlight">Ferramentas</span><br>
+                    e Especialidades OSINT
+                </h1>
+                <p class="hero-subtitle">
+                    Nosso stack principal para coleta, análise e apresentação de inteligência a partir de fontes abertas.
+                    Aplicamos uso ético, legal e orientado a resultados.
+                </p>
+                <div class="hero-buttons">
+                    <a href="index.html#contact" class="btn btn-primary">Fale com a gente</a>
+                    <a href="index.html#services" class="btn btn-secondary">Ver serviços</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-icon">
+                    <i class="fas fa-toolbox"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Grid -->
+    <section class="services" id="tools">
+        <div class="container">
+            <div class="section-header">
+                <h2>Stack de Ferramentas</h2>
+                <p>Principais categorias e soluções que utilizamos no dia a dia</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-magnifying-glass"></i></div>
+                    <h3>Coleta e Mapeamento</h3>
+                    <p>Levantamento inicial, footprint digital e mapeamento de superfícies públicas.</p>
+                    <ul>
+                        <li>theHarvester, Google Dorks, Wayback Machine</li>
+                        <li>Recon-ng, SpiderFoot (módulos passivos)</li>
+                        <li>OpenCorporates, Company checkers</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Infraestrutura e Domínios</h3>
+                    <p>Inteligência sobre hosts, domínios e serviços expostos.</p>
+                    <ul>
+                        <li>Shodan, Censys (consultas passivas)</li>
+                        <li>DNSdumpster, SecurityTrails</li>
+                        <li>WHOIS, Passive DNS</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-user"></i></div>
+                    <h3>Pessoas e Perfis</h3>
+                    <p>Rastreamento e correlação de perfis em redes sociais e plataformas públicas.</p>
+                    <ul>
+                        <li>Sherlock (usernames), GHunt (Gmail/Google)</li>
+                        <li>Social search/OSINT frameworks</li>
+                        <li>LinkedIn/Twitter/X pesquisa avançada</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-file-lines"></i></div>
+                    <h3>Documentos e Metadados</h3>
+                    <p>Coleta e extração de metadados de documentos públicos.</p>
+                    <ul>
+                        <li>FOCA, metagoofil</li>
+                        <li>Exiftool (metadados de mídia)</li>
+                        <li>Pesquisa por extensão + operadores</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-envelope"></i></div>
+                    <h3>E-mails e Credenciais</h3>
+                    <p>Verificação e enriquecimento de e-mails em bases públicas.</p>
+                    <ul>
+                        <li>Hunter.io, Clearbit (enriquecimento)</li>
+                        <li>Have I Been Pwned (exposição pública)</li>
+                        <li>Validações passivas e correlações</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-diagram-project"></i></div>
+                    <h3>Visualização e Relatórios</h3>
+                    <p>Organização, análise e apresentação de achados.</p>
+                    <ul>
+                        <li>Maltego (diagramas e pivôs)</li>
+                        <li>Gephi/Graph tools (visualização)</li>
+                        <li>Relatórios técnicos e timelines</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="about" style="padding-top:60px; padding-bottom:60px;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Uso ético e conformidade</h2>
+                <p>Trabalhamos exclusivamente com fontes abertas e métodos legais, alinhados a políticas de privacidade e à finalidade contratada.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Tem uma demanda específica ou precisa validar se algo é possível com OSINT? Fale conosco e montamos um plano de ação sob medida.</p>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="index.html#contact" class="btn btn-primary">Entrar em contato</a>
+                        <a href="index.html#services" class="btn btn-secondary" style="margin-left:0.5rem;">Explorar serviços</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-search"></i>
+                        <span>SCORPION Intelligence</span>
+                    </div>
+                    <p>Especialistas em OSINT para advogados e empresas</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="index.html#home" style="color:#cbd5e0;text-decoration:none;">Início</a></li>
+                        <li><a href="index.html#services" style="color:#cbd5e0;text-decoration:none;">Serviços</a></li>
+                        <li><a href="ferramentas.html" style="color:#cbd5e0;text-decoration:none;">Ferramentas</a></li>
+                        <li><a href="index.html#contact" style="color:#cbd5e0;text-decoration:none;">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>Email: juliocamposmachado@gmail.com</p>
+                    <p>WhatsApp: +55 11 99294-6628</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Scorpion Intelligence - Like Look Solutions. Todos os direitos reservados.</p>
+                <p>CNPJ: 36.992.198/0001-84</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
