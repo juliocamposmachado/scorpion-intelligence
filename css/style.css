@@ -51,12 +51,34 @@ body {
     font-weight: 700;
     color: #fff;
     text-decoration: none;
+    gap: 12px;
 }
 
 .nav-logo i {
     margin-right: 10px;
     color: #f56565;
     font-size: 1.8rem;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 8px rgba(245, 101, 101, 0.3));
+    transition: all 0.3s ease;
+    display: block;
+    background: transparent;
+}
+
+.logo-img[src=""],
+.logo-img:not([src]) {
+    display: none;
+}
+
+.logo-img:hover {
+    filter: drop-shadow(0 4px 12px rgba(245, 101, 101, 0.5));
+    transform: scale(1.05);
 }
 
 .nav-menu {
@@ -426,6 +448,181 @@ body {
     color: #e53e3e;
 }
 
+/* CrimeIsDown Special Styling */
+.crimeisdown-item {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border: 2px solid #0f3460;
+    position: relative;
+    overflow: hidden;
+}
+
+.crimeisdown-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00d4ff, transparent);
+    animation: scanLine 3s ease-in-out infinite;
+}
+
+.crimeisdown-item i:first-child {
+    color: #00d4ff;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+.crimeisdown-item h4 {
+    color: #00d4ff;
+    text-shadow: 0 0 5px rgba(0, 212, 255, 0.3);
+}
+
+.crimeisdown-link {
+    color: #ffffff !important;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: rgba(0, 212, 255, 0.1);
+    border-radius: 6px;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+
+.crimeisdown-link:hover {
+    background: rgba(0, 212, 255, 0.2) !important;
+    border-color: #00d4ff !important;
+    color: #00d4ff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+}
+
+.crimeisdown-link i {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.crimeisdown-item small {
+    color: #8892b0;
+    font-style: italic;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: block;
+    line-height: 1.3;
+}
+
+@keyframes scanLine {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+/* OSINT Toolkit Special Styling */
+.osint-toolkit-item {
+    background: linear-gradient(135deg, #2d1b69 0%, #1e1538 100%);
+    border: 2px solid #8b5cf6;
+    position: relative;
+    overflow: hidden;
+}
+
+.osint-toolkit-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #a855f7, transparent);
+    animation: toolkitScan 2.5s ease-in-out infinite;
+}
+
+.osint-toolkit-item i:first-child {
+    color: #a855f7;
+    text-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+}
+
+.osint-toolkit-item h4 {
+    color: #a855f7;
+    text-shadow: 0 0 5px rgba(168, 85, 247, 0.3);
+}
+
+.osint-toolkit-link {
+    color: #ffffff !important;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background: rgba(168, 85, 247, 0.15);
+    border-radius: 8px;
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+
+.osint-toolkit-link:hover {
+    background: rgba(168, 85, 247, 0.25) !important;
+    border-color: #a855f7 !important;
+    color: #a855f7 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(168, 85, 247, 0.4);
+}
+
+.osint-toolkit-link i {
+    animation: toolkitGlow 1.8s ease-in-out infinite alternate;
+}
+
+.osint-toolkit-item small {
+    color: #c4b5fd;
+    font-style: italic;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: block;
+    line-height: 1.3;
+    font-weight: 500;
+}
+
+@keyframes toolkitScan {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes toolkitGlow {
+    0% {
+        text-shadow: 0 0 5px rgba(168, 85, 247, 0.5);
+        transform: scale(1);
+    }
+    100% {
+        text-shadow: 0 0 15px rgba(168, 85, 247, 0.8);
+        transform: scale(1.05);
+    }
+}
+
 /* Contact Form */
 .contact-form {
     background: #f8f9fa;
@@ -519,6 +716,27 @@ body {
     margin-bottom: 0.5rem;
 }
 
+/* Footer Motto/Slogan */
+.footer-motto {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #374151;
+}
+
+.footer-motto p {
+    color: #f56565 !important;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    margin: 0;
+    opacity: 0.9;
+    letter-spacing: 0.3px;
+    font-weight: 500;
+}
+
+.footer-motto em {
+    font-style: italic;
+}
+
 /* Animações */
 @keyframes fadeInUp {
     from {
@@ -536,7 +754,16 @@ body {
 }
 
 /* Responsividade */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
+    .logo-img {
+        height: 35px;
+        max-width: 150px;
+    }
+    
+    .nav-logo {
+        font-size: 1.3rem;
+        gap: 10px;
+    }
     .hero-container {
         grid-template-columns: 1fr;
         text-align: center;
@@ -627,9 +854,28 @@ body {
         text-align: center;
         gap: 1.5rem;
     }
+    
+    .footer-motto p {
+        font-size: 0.7rem;
+        line-height: 1.3;
+        padding: 0 10px;
+    }
 }
 
 @media (max-width: 480px) {
+    .logo-img {
+        height: 30px;
+        max-width: 120px;
+    }
+    
+    .nav-logo {
+        font-size: 1.1rem;
+        gap: 8px;
+    }
+    
+    .nav-logo span {
+        display: none;
+    }
     .container {
         padding: 0 15px;
     }
@@ -658,6 +904,12 @@ body {
     .form-group input,
     .form-group textarea {
         padding: 12px;
+    }
+    
+    .footer-motto p {
+        font-size: 0.65rem;
+        line-height: 1.2;
+        padding: 0 5px;
     }
 }
 
