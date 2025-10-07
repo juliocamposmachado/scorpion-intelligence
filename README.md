@@ -1,5 +1,7 @@
 # Scorpion Intelligence - Site de Inteligência OSINT
 
+<img width="1749" height="980" alt="image" src="https://github.com/user-attachments/assets/cc751b81-9a8b-46b1-b813-4ba332b88580" />
+
 ## Sobre o Projeto
 
 Site profissional da **Scorpion Intelligence**, uma divisão especializada da Like Look Solutions, focada em serviços de inteligência OSINT (Open Source Intelligence) para advogados e empresas.
