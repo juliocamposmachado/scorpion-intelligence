@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Coleção completa de ferramentas OSINT da Scorpion Intelligence - Base de dados abrangente de recursos para investigação digital.">
+    <title>Base de Ferramentas OSINT | Scorpion Intelligence</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .tool-category {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+        .tool-category h3 {
+            color: #00d4ff;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .tool-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .tool-list::-webkit-scrollbar {
+            width: 6px;
+        }
+        .tool-list::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+        }
+        .tool-list::-webkit-scrollbar-thumb {
+            background: #00d4ff;
+            border-radius: 3px;
+        }
+        .tool-item {
+            display: block;
+            padding: 0.75rem;
+            margin-bottom: 0.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .tool-item:hover {
+            background: rgba(0, 212, 255, 0.1);
+            border-color: #00d4ff;
+            transform: translateY(-2px);
+        }
+        .tool-item h4 {
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+            color: #00d4ff;
+        }
+        .tool-item p {
+            font-size: 0.8rem;
+            color: #cbd5e0;
+            margin: 0;
+        }
+        .search-container {
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .search-input {
+            width: 100%;
+            max-width: 500px;
+            padding: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            font-size: 1rem;
+            backdrop-filter: blur(10px);
+        }
+        .search-input::placeholder {
+            color: #cbd5e0;
+        }
+        .tool-count {
+            background: rgba(0, 212, 255, 0.2);
+            color: #00d4ff;
+            padding: 0.25rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin-left: auto;
+        }
+        .category-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a class="nav-logo" href="index.html#home">
+                    <i class="fas fa-search"></i>
+                    <span>SCORPION</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html#home" class="nav-link">Início</a></li>
+                    <li><a href="index.html#about" class="nav-link">Sobre</a></li>
+                    <li><a href="index.html#services" class="nav-link">Serviços</a></li>
+                    <li><a href="ferramentas.html" class="nav-link">Stack</a></li>
+                    <li><a href="ferramentas-completas.html" class="nav-link active">Base de Ferramentas</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contato</a></li>
+                </ul>
+                <div class="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" style="min-height: 50vh;">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="highlight">Base Completa</span><br>
+                    de Ferramentas OSINT
+                </h1>
+                <p class="hero-subtitle">
+                    Coleção abrangente com mais de 200 ferramentas especializadas em Open Source Intelligence, 
+                    organizadas por categorias para facilitar sua investigação digital.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#tools" class="btn btn-primary">Explorar Ferramentas</a>
+                    <a href="index.html#contact" class="btn btn-secondary">Solicitar Consultoria</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search -->
+    <section class="services" style="padding-top: 2rem;">
+        <div class="container">
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Buscar ferramentas por nome, descrição ou categoria...">
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Grid -->
+    <section class="services" id="tools">
+        <div class="container">
+            <div class="section-header">
+                <h2>Categorias de Ferramentas</h2>
+                <p>Recursos especializados para cada tipo de investigação OSINT</p>
+            </div>
+
+            <div class="tools-grid">
+                
+                <!-- Motores de Busca -->
+                <div class="tool-category" data-category="searches">
+                    <div class="category-header">
+                        <h3><i class="fas fa-search"></i> Motores de Busca</h3>
+                        <span class="tool-count" id="searches-count">31</span>
+                    </div>
+                    <div class="tool-list">
+                        <a href="https://www.google.com/advanced_search" target="_blank" class="tool-item" data-search="google advanced search página de pesquisa avançada do google">
+                            <h4>Google Advanced Search</h4>
+                            <p>Página de pesquisa avançada do Google</p>
+                        </a>
+                        <a href="https://bing.com/?startme" target="_blank" class="tool-item" data-search="bing motor de busca bing da microsoft">
+                            <h4>Bing</h4>
+                            <p>Motor de busca Bing da Microsoft</p>
+                        </a>
+                        <a href="https://trends.google.com/trends/?geo=US" target="_blank" class="tool-item" data-search="google trends ferramenta para analisar tendências de busca do google">
+                            <h4>Google Trends</h4>
+                            <p>Ferramenta para analisar tendências de busca do Google</p>
+                        </a>
+                        <a href="https://www.qwant.com/" target="_blank" class="tool-item" data-search="qwant motor de busca europeu que respeita a privacidade">
+                            <h4>Qwant</h4>
+                            <p>Motor de busca europeu que respeita a privacidade</p>
+                        </a>
+                        <a href="http://isearchfrom.com/" target="_blank" class="tool-item" data-search="i search from ferramenta para simular buscas de diferentes localidades">
+                            <h4>i search from</h4>
+                            <p>Ferramenta para simular buscas de diferentes localidades</p>
+                        </a>
+                        <a href="https://www.baidu.com/" target="_blank" class="tool-item" data-search="baidu principal motor de busca chinês">
+                            <h4>Baidu</h4>
+                            <p>Principal motor de busca chinês</p>
+                        </a>
+                        <a href="https://yandex.com/" target="_blank" class="tool-item" data-search="yandex motor de busca russo com tecnologia de machine learning">
+                            <h4>Yandex</h4>
+                            <p>Motor de busca russo com tecnologia de machine learning</p>
+                        </a>
+                        <a href="https://www.shodan.io/" target="_blank" class="tool-item" data-search="shodan motor de busca para dispositivos conectados à internet">
+                            <h4>Shodan</h4>
+                            <p>Motor de busca para dispositivos conectados à internet</p>
+                        </a>
+                        <a href="https://www.shodan.io/search/advanced" target="_blank" class="tool-item" data-search="shodan search engine advance search página de busca avançada do shodan">
+                            <h4>Shodan Advanced Search</h4>
+                            <p>Página de busca avançada do Shodan</p>
+                        </a>
+                        <a href="https://github.com/jakejarvis/awesome-shodan-queries" target="_blank" class="tool-item" data-search="awesome shodan queries coleção de queries interessantes para o shodan.io">
+                            <h4>Awesome Shodan Queries</h4>
+                            <p>Coleção de queries interessantes para o Shodan.io</p>
+                        </a>
+                        <a href="https://github.com/H4ckD4d/Shodan-Dorks-for-Advanced-OSINT" target="_blank" class="tool-item" data-search="shodan dorks for advanced osint dorks do shodan para osint avançado">
+                            <h4>Shodan Dorks for Advanced OSINT</h4>
+                            <p>Dorks do Shodan para OSINT avançado</p>
+                        </a>
+                        <a href="https://programmablesearchengine.google.com/about/" target="_blank" class="tool-item" data-search="programmable search engine by google ferramenta para criar mecanismos de busca personalizados">
+                            <h4>Google Programmable Search</h4>
+                            <p>Ferramenta para criar mecanismos de busca personalizados</p>
+                        </a>
+                        <a href="https://hackyx.io/" target="_blank" class="tool-item" data-search="hackyx plataforma de ferramentas de hacking ético">
+                            <h4>Hackyx</h4>
+                            <p>Plataforma de ferramentas de hacking ético</p>
+                        </a>
+                        <a href="https://copyseeker.net/discovery" target="_blank" class="tool-item" data-search="discovery ferramenta de descoberta e análise de conteúdo">
+                            <h4>Discovery</h4>
+                            <p>Ferramenta de descoberta e análise de conteúdo</p>
+                        </a>
+                        <a href="https://www.dedigger.com/#gsc.tab=0" target="_blank" class="tool-item" data-search="dedigger ferramenta para encontrar arquivos públicos no google drive">
+                            <h4>dedigger</h4>
+                            <p>Ferramenta para encontrar arquivos públicos no Google Drive</p>
+                        </a>
+                        <a href="https://www.searchftps.net/" target="_blank" class="tool-item" data-search="napalm ftp indexer indexador e motor de busca para servidores ftp">
+                            <h4>NAPALM FTP Indexer</h4>
+                            <p>Indexador e motor de busca para servidores FTP</p>
+                        </a>
+                        <a href="https://www.archives.gov/" target="_blank" class="tool-item" data-search="national archives records administration arquivo nacional dos estados unidos">
+                            <h4>National Archives (US)</h4>
+                            <p>Arquivo Nacional dos Estados Unidos</p>
+                        </a>
+                        <a href="https://guilherme-moraiss.github.io/Deep-Dork-Web/" target="_blank" class="tool-item" data-search="deep dork ferramenta avançada para google dorking">
+                            <h4>Deep Dork</h4>
+                            <p>Ferramenta avançada para Google Dorking</p>
+                        </a>
+                        <a href="https://dorkgenius.com/" target="_blank" class="tool-item" data-search="dorkgenius gerador de queries de busca customizadas usando ia">
+                            <h4>DorkGenius</h4>
+                            <p>Gerador de queries de busca customizadas usando IA</p>
+                        </a>
+                        <a href="https://metaosint.github.io/table" target="_blank" class="tool-item" data-search="meta osint ferramenta para identificar recursos osint relevantes rapidamente">
+                            <h4>Meta OSINT</h4>
+                            <p>Ferramenta para identificar recursos OSINT relevantes rapidamente</p>
+                        </a>
+                        <a href="https://analystresearchtools.com/" target="_blank" class="tool-item" data-search="analyst research tools conjunto de ferramentas de pesquisa para analistas">
+                            <h4>Analyst Research Tools</h4>
+                            <p>Conjunto de ferramentas de pesquisa para analistas</p>
+                        </a>
+                        <a href="https://impersonal.me/" target="_blank" class="tool-item" data-search="impersonal ferramenta para buscar no google de diferentes países e idiomas">
+                            <h4>Impersonal.me</h4>
+                            <p>Ferramenta para buscar no Google de diferentes países e idiomas</p>
+                        </a>
+                        <a href="https://app.sherlockeye.io/" target="_blank" class="tool-item" data-search="sherlockeye plataforma de investigação osint">
+                            <h4>Sherlockeye</h4>
+                            <p>Plataforma de investigação OSINT</p>
+                        </a>
+                        <a href="https://meawfy.com/" target="_blank" class="tool-item" data-search="meawfy motor de busca avançado para arquivos do mega.nz">
+                            <h4>Meawfy</h4>
+                            <p>Motor de busca avançado para arquivos do Mega.nz</p>
+                        </a>
+                        <a href="https://lambda.black/osint.html" target="_blank" class="tool-item" data-search="osint investigation assistant assistente para investigações osint focado em pessoas">
+                            <h4>OSINT Investigation Assistant</h4>
+                            <p>Assistente para investigações OSINT focado em pessoas</p>
+                        </a>
+                        <a href="https://www.mariosantella.com/the-osint-rack/" target="_blank" class="tool-item" data-search="the osint rack coleção curada de recursos osint categorizados">
+                            <h4>The OSINT Rack</h4>
+                            <p>Coleção curada de recursos OSINT categorizados</p>
+                        </a>
+                        <a href="https://www.predictagraph.com/" target="_blank" class="tool-item" data-search="predicta graph ferramenta de análise preditiva e visualização de dados">
+                            <h4>Predicta Graph</h4>
+                            <p>Ferramenta de análise preditiva e visualização de dados</p>
+                        </a>
+                        <a href="https://oathnet.org/" target="_blank" class="tool-item" data-search="oathnet rede e recursos para profissionais de osint">
+                            <h4>Oathnet.org</h4>
+                            <p>Rede e recursos para profissionais de OSINT</p>
+                        </a>
+                        <a href="https://internationalpeoplesearch.com/free-international-people-search/international-google-search-engine.html" target="_blank" class="tool-item" data-search="international google search ferramenta para busca internacional no google">
+                            <h4>International Google Search</h4>
+                            <p>Ferramenta para busca internacional no Google</p>
+                        </a>
+                        <a href="https://www.vecteezy.com/" target="_blank" class="tool-item" data-search="vecteezy banco de imagens vetores e recursos gráficos gratuitos">
+                            <h4>Vecteezy</h4>
+                            <p>Banco de imagens, vetores e recursos gráficos gratuitos</p>
+                        </a>
+                        <a href="https://start.me/p/6rOGjm/osint" target="_blank" class="tool-item" data-search="bug bounty dork generator página start.me com recursos osint">
+                            <h4>Bug Bounty Dork Generator</h4>
+                            <p>Página start.me com recursos OSINT</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Redes Sociais -->
+                <div class="tool-category" data-category="social-media">
+                    <div class="category-header">
+                        <h3><i class="fas fa-share-alt"></i> Redes Sociais</h3>
+                        <span class="tool-count" id="social-media-count">28</span>
+                    </div>
+                    <div class="tool-list">
+                        <a href="https://www.reddit.com/" target="_blank" class="tool-item" data-search="reddit plataforma de discussão e agregação de notícias">
+                            <h4>Reddit</h4>
+                            <p>Plataforma de discussão e agregação de notícias</p>
+                        </a>
+                        <a href="https://www.tiktok.com/en/" target="_blank" class="tool-item" data-search="tiktok plataforma de vídeos curtos">
+                            <h4>TikTok</h4>
+                            <p>Plataforma de vídeos curtos</p>
+                        </a>
+                        <a href="https://twitter.com/home" target="_blank" class="tool-item" data-search="twitter x rede social de microblogging">
+                            <h4>Twitter/X</h4>
+                            <p>Rede social de microblogging</p>
+                        </a>
+                        <a href="https://www.facebook.com/" target="_blank" class="tool-item" data-search="facebook maior rede social do mundo">
+                            <h4>Facebook</h4>
+                            <p>Maior rede social do mundo</p>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="tool-item" data-search="instagram plataforma de compartilhamento de fotos e vídeos">
+                            <h4>Instagram</h4>
+                            <p>Plataforma de compartilhamento de fotos e vídeos</p>
+                        </a>
+                        <a href="https://www.linkedin.com/" target="_blank" class="tool-item" data-search="linkedin rede social profissional">
+                            <h4>LinkedIn</h4>
+                            <p>Rede social profissional</p>
+                        </a>
+                        <a href="https://www.snapchat.com/" target="_blank" class="tool-item" data-search="snapchat aplicativo de mensagens com fotos e vídeos temporários">
+                            <h4>Snapchat</h4>
+                            <p>Aplicativo de mensagens com fotos e vídeos temporários</p>
+                        </a>
+                        <a href="https://telegram.org/" target="_blank" class="tool-item" data-search="telegram aplicativo de mensagens rápido seguro e poderoso">
+                            <h4>Telegram</h4>
+                            <p>Aplicativo de mensagens rápido, seguro e poderoso</p>
+                        </a>
+                        <a href="https://discord.com/" target="_blank" class="tool-item" data-search="discord plataforma de comunicação por voz vídeo e texto">
+                            <h4>Discord</h4>
+                            <p>Plataforma de comunicação por voz, vídeo e texto</p>
+                        </a>
+                        <a href="https://bsky.app/" target="_blank" class="tool-item" data-search="bluesky social rede social descentralizada">
+                            <h4>Bluesky Social</h4>
+                            <p>Rede social descentralizada</p>
+                        </a>
+                        <a href="https://joinmastodon.org/" target="_blank" class="tool-item" data-search="mastodon plataforma de mídia social descentralizada gratuita e open-source">
+                            <h4>Mastodon</h4>
+                            <p>Plataforma de mídia social descentralizada, gratuita e open-source</p>
+                        </a>
+                        <a href="https://www.skype.com/en/" target="_blank" class="tool-item" data-search="skype serviço de videochamadas e mensagens">
+                            <h4>Skype</h4>
+                            <p>Serviço de videochamadas e mensagens</p>
+                        </a>
+                        <a href="https://getsession.org/" target="_blank" class="tool-item" data-search="session mensageiro privado que remove chances de coleta de metadados">
+                            <h4>Session</h4>
+                            <p>Mensageiro privado que remove chances de coleta de metadados</p>
+                        </a>
+                        <a href="https://trillian.im/" target="_blank" class="tool-item" data-search="trillian cliente de mensagens instantâneas compatível com hipaa">
+                            <h4>Trillian</h4>
+                            <p>Cliente de mensagens instantâneas compatível com HIPAA</p>
+                        </a>
+                        <a href="https://hive.com/" target="_blank" class="tool-item" data-search="hive plataforma de produtividade para equipes ágeis">
+                            <h4>Hive</h4>
+                            <p>Plataforma de produtividade para equipes ágeis</p>
+                        </a>
+                        <a href="https://www.plurk.com/portal/" target="_blank" class="tool-item" data-search="plurk plataforma de microblogging social">
+                            <h4>Plurk</h4>
+                            <p>Plataforma de microblogging social</p>
+                        </a>
+                        <a href="https://kik.com/" target="_blank" class="tool-item" data-search="kik aplicativo de mensagens conectando o mundo através do chat">
+                            <h4>Kik</h4>
+                            <p>Aplicativo de mensagens conectando o mundo através do chat</p>
+                        </a>
+                        <a href="https://kick.com/social" target="_blank" class="tool-item" data-search="kick plataforma de streaming e social">
+                            <h4>Kick.com</h4>
+                            <p>Plataforma de streaming e social</p>
+                        </a>
+                        <a href="https://www.urbandictionary.com/" target="_blank" class="tool-item" data-search="urban dictionary dicionário colaborativo de gírias e termos urbanos">
+                            <h4>Urban Dictionary</h4>
+                            <p>Dicionário colaborativo de gírias e termos urbanos</p>
+                        </a>
+                        <a href="https://www.wechat.com/" target="_blank" class="tool-item" data-search="wechat aplicativo multi-plataforma de mensagens">
+                            <h4>WeChat</h4>
+                            <p>Aplicativo multi-plataforma de mensagens</p>
+                        </a>
+                        <a href="https://www.fiverr.com/" target="_blank" class="tool-item" data-search="fiverr marketplace de serviços freelancer">
+                            <h4>Fiverr</h4>
+                            <p>Marketplace de serviços freelancer</p>
+                        </a>
+                        <a href="https://kbin.social/" target="_blank" class="tool-item" data-search="kbin social plataforma para explorar o fediverso">
+                            <h4>Kbin.social</h4>
+                            <p>Plataforma para explorar o Fediverso</p>
+                        </a>
+                        <a href="https://www.social-searcher.com/" target="_blank" class="tool-item" data-search="social searcher ferramenta de monitoramento de menções em redes sociais">
+                            <h4>Social Searcher</h4>
+                            <p>Ferramenta de monitoramento de menções em redes sociais e web</p>
+                        </a>
+                        <a href="https://post.news/?r=TEz8w" target="_blank" class="tool-item" data-search="post news plataforma de notícias e discussões">
+                            <h4>Post.news</h4>
+                            <p>Plataforma de notícias e discussões</p>
+                        </a>
+                        <a href="https://craigslist.org" target="_blank" class="tool-item" data-search="craigslist classificados online e anúncios locais">
+                            <h4>Craigslist</h4>
+                            <p>Classificados online e anúncios locais</p>
+                        </a>
+                        <a href="https://truthsocial.com/" target="_blank" class="tool-item" data-search="truth social plataforma de mídia social">
+                            <h4>TRUTH Social</h4>
+                            <p>Plataforma de mídia social</p>
+                        </a>
+                        <a href="https://tlgrm.eu/channels" target="_blank" class="tool-item" data-search="telegram channels list diretório de canais interessantes do telegram">
+                            <h4>Telegram Channels List</h4>
+                            <p>Diretório de canais interessantes do Telegram</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Ferramentas de Redes Sociais -->
+                <div class="tool-category" data-category="social-tools">
+                    <div class="category-header">
+                        <h3><i class="fas fa-tools"></i> Ferramentas de Redes Sociais</h3>
+                        <span class="tool-count" id="social-tools-count">42</span>
+                    </div>
+                    <div class="tool-list">
+                        <a href="https://instantusername.com/" target="_blank" class="tool-item" data-search="instantusername verifica disponibilidade de nomes de usuário em múltiplas plataformas">
+                            <h4>InstantUsername</h4>
+                            <p>Verifica disponibilidade de nomes de usuário em múltiplas plataformas</p>
+                        </a>
+                        <a href="https://whopostedwhat.com/" target="_blank" class="tool-item" data-search="who posted what ferramenta de busca avançada para facebook">
+                            <h4>Who posted what?</h4>
+                            <p>Ferramenta de busca avançada para Facebook</p>
+                        </a>
+                        <a href="https://ashley.cynic.al/" target="_blank" class="tool-item" data-search="ashley madison verifica se um email foi exposto no hack">
+                            <h4>Ashley Madison Checker</h4>
+                            <p>Verifica se um email foi exposto no hack da Ashley Madison</p>
+                        </a>
+                        <a href="https://namevine.com/" target="_blank" class="tool-item" data-search="namevine ferramenta de busca de nomes de usuário">
+                            <h4>Namevine</h4>
+                            <p>Ferramenta de busca de nomes de usuário</p>
+                        </a>
+                        <a href="http://www.uvrx.com/facebook.html" target="_blank" class="tool-item" data-search="facebook custom search engine motor de busca personalizado">
+                            <h4>Facebook Custom Search</h4>
+                            <p>Motor de busca personalizado para Facebook</p>
+                        </a>
+                        <a href="https://www.speakrj.com/audit/" target="_blank" class="tool-item" data-search="social media auditor speakrj auditor de estatísticas">
+                            <h4>Social Media Auditor</h4>
+                            <p>Auditor de estatísticas de redes sociais</p>
+                        </a>
+                        <a href="https://www.pixwox.com/profile/therock/" target="_blank" class="tool-item" data-search="pixwox instagram viewer visualizador de perfis">
+                            <h4>Pixwox Instagram Viewer</h4>
+                            <p>Visualizador de perfis do Instagram (substituir nome do usuário)</p>
+                        </a>
+                        <a href="https://imginn.com/" target="_blank" class="tool-item" data-search="imginn visualizador anônimo de perfis e stories do instagram">
+                            <h4>imginn</h4>
+                            <p>Visualizador anônimo de perfis e stories do Instagram</p>
+                        </a>
+                        <a href="https://socnetv.org/downloads" target="_blank" class="tool-item" data-search="social network visualizer software para análise e visualização de redes sociais">
+                            <h4>Social Network Visualizer</h4>
+                            <p>Software para análise e visualização de redes sociais</p>
+                        </a>
+                        <a href="https://www.heavy.ai/demos/tweetmap" target="_blank" class="tool-item" data-search="heavy ai tweetmap visualizador de tweets em tempo real no mapa">
+                            <h4>HEAVY.AI TweetMap</h4>
+                            <p>Visualizador de tweets em tempo real no mapa</p>
+                        </a>
+                        <a href="https://www.idcrawl.com/username" target="_blank" class="tool-item" data-search="username search idcrawl busca de nomes de usuário">
+                            <h4>Username Search - IDCrawl</h4>
+                            <p>Busca de nomes de usuário em múltiplas plataformas</p>
+                        </a>
+                        <a href="https://www.theinvestigator.blog/blog/telegram-osint-investigations" target="_blank" class="tool-item" data-search="best telegram osint tools melhores ferramentas online para investigações">
+                            <h4>Best Telegram OSINT Tools</h4>
+                            <p>Melhores ferramentas online para investigações no Telegram</p>
+                        </a>
+                        <a href="https://lyzem.com/" target="_blank" class="tool-item" data-search="lyzem telegram search motor de busca para blogs">
+                            <h4>Lyzem - Telegram Search</h4>
+                            <p>Motor de busca para blogs e Telegram</p>
+                        </a>
+                        <a href="https://deturl.com/bypass-youtube-age-restriction-login-requirement.html" target="_blank" class="tool-item" data-search="bypass youtube age restriction contorna restrições de idade sem login">
+                            <h4>Bypass YouTube Age Restriction</h4>
+                            <p>Contorna restrições de idade do YouTube sem login</p>
+                        </a>
+                        <a href="https://hoaxy.osome.iu.edu/" target="_blank" class="tool-item" data-search="hoaxy how claims spread online visualiza propagação de informações no twitter">
+                            <h4>Hoaxy: How claims spread online</h4>
+                            <p>Visualiza a propagação de informações no Twitter</p>
+                        </a>
+                        <a href="https://mattw.io/youtube-geofind/location" target="_blank" class="tool-item" data-search="youtube geographic search busca vídeos por localização geográfica">
+                            <h4>YouTube Geographic Search</h4>
+                            <p>Busca vídeos do YouTube por localização geográfica</p>
+                        </a>
+                        <a href="https://www.locoloader.com/" target="_blank" class="tool-item" data-search="locoloader downloader de vídeos música e fotos">
+                            <h4>Locoloader</h4>
+                            <p>Downloader de vídeos, música e fotos de sites populares</p>
+                        </a>
+                        <a href="https://github.com/thewhiteh4t/nexfil" target="_blank" class="tool-item" data-search="nexfil social media osint ferramenta para encontrar perfis">
+                            <h4>nexfil - Social Media OSINT</h4>
+                            <p>Ferramenta OSINT para encontrar perfis em redes sociais</p>
+                        </a>
+                        <a href="https://github.com/iojw/socialscan" target="_blank" class="tool-item" data-search="socialscan verifica disponibilidade de email username em sites sociais">
+                            <h4>socialscan</h4>
+                            <p>Verifica disponibilidade de email/username em sites sociais</p>
+                        </a>
+                        <a href="https://github.com/piaolin/DetectDee" target="_blank" class="tool-item" data-search="detectdee encontra contas de redes sociais por username email ou telefone">
+                            <h4>DetectDee</h4>
+                            <p>Encontra contas de redes sociais por username, email ou telefone</p>
+                        </a>
+                        <a href="https://github.com/AzizKpln/Moriarty-Project" target="_blank" class="tool-item" data-search="moriarty project ferramenta de reconhecimento e osint">
+                            <h4>Moriarty-Project</h4>
+                            <p>Ferramenta de reconhecimento e OSINT</p>
+                        </a>
+                        <a href="https://github.com/Moham3dRiahi/Th3inspector" target="_blank" class="tool-item" data-search="th3inspector ferramenta completa de reconhecimento e osint">
+                            <h4>Th3inspector</h4>
+                            <p>Ferramenta completa de reconhecimento e OSINT</p>
+                        </a>
+                        <a href="https://github.com/C3n7ral051nt4g3ncy/WhatsMyName-Python" target="_blank" class="tool-item" data-search="whatsmyname python script para verificar nomes de usuário em sites">
+                            <h4>WhatsMyName-Python</h4>
+                            <p>Script Python para verificar nomes de usuário em sites</p>
+                        </a>
+                        <a href="https://github.com/qeeqbox/social-analyzer" target="_blank" class="tool-item" data-search="social analyzer api cli web app para analisar perfis">
+                            <h4>social-analyzer</h4>
+                            <p>API, CLI e Web App para analisar perfis em 1000+ sites de redes sociais</p>
+                        </a>
+                        <a href="https://usersearch.org/" target="_blank" class="tool-item" data-search="username search usersearch busca por username ou email">
+                            <h4>Username Search - UserSearch.org</h4>
+                            <p>Busca por username ou email em 600+ redes sociais e sites de relacionamento</p>
+                        </a>
+                        <a href="https://www.toolsoverflow.com/youtube/youtube-title-description-extractor" target="_blank" class="tool-item" data-search="youtube metadata extractor extrator de descrição e metadados">
+                            <h4>YouTube Metadata Extractor</h4>
+                            <p>Extrator de descrição e metadados de vídeos do YouTube</p>
+                        </a>
+                        <a href="https://www.fdown.net/" target="_blank" class="tool-item" data-search="facebook video downloader fdown downloader online de vídeos">
+                            <h4>Facebook Video Downloader - FDown</h4>
+                            <p>Downloader online de vídeos do Facebook</p>
+                        </a>
+                        <a href="https://publer.io/tools/facebook-video-downloader" target="_blank" class="tool-item" data-search="facebook video downloader publer downloader de vídeos em hd">
+                            <h4>Facebook Video Downloader - Publer</h4>
+                            <p>Downloader de vídeos do Facebook em HD</p>
+                        </a>
+                        <a href="https://socialblade.com/" target="_blank" class="tool-item" data-search="socialblade estatísticas de youtube twitch instagram">
+                            <h4>Socialblade</h4>
+                            <p>Estatísticas de YouTube, Twitch, Instagram e muito mais</p>
+                        </a>
+                        <a href="https://internect.info/" target="_blank" class="tool-item" data-search="internect info informações técnicas sobre contas do bluesky">
+                            <h4>internect.info</h4>
+                            <p>Informações técnicas sobre contas do Bluesky</p>
+                        </a>
+                        <a href="https://insta-stories-viewer.com/" target="_blank" class="tool-item" data-search="instagram anonymous story viewer visualizador anônimo de stories">
+                            <h4>Instagram Anonymous Story Viewer</h4>
+                            <p>Visualizador anônimo de stories do Instagram</p>
+                        </a>
+                        <a href="https://usersearch.ai/" target="_blank" class="tool-item" data-search="usersearch ai busca inteligente de usuários usando ia">
+                            <h4>usersearch.ai</h4>
+                            <p>Busca inteligente de usuários usando IA</p>
+                        </a>
+                        <a href="https://profileimageintel.com/" target="_blank" class="tool-item" data-search="profile image intel descobre quando fotos de perfil foram enviadas">
+                            <h4>Profile Image Intel</h4>
+                            <p>Descobre quando fotos de perfil foram enviadas no Instagram, Facebook e WhatsApp</p>
+                        </a>
+                        <a href="https://darkwebinformer.com/silverinstaeye-a-comprehensive-osint-tool-for-instagram/" target="_blank" class="tool-item" data-search="silverinstaeye instagram osint tool ferramenta osint abrangente">
+                            <h4>SilverInstaEye: Instagram OSINT Tool</h4>
+                            <p>Ferramenta OSINT abrangente para Instagram</p>
+                        </a>
+                        <a href="https://yt5s.com/en87" target="_blank" class="tool-item" data-search="yt5s youtube downloader downloader de vídeos e conversor para mp3">
+                            <h4>YT5s.com - YouTube Downloader</h4>
+                            <p>Downloader de vídeos do YouTube e conversor para MP3</p>
+                        </a>
+                        <a href="https://nsfwyoutube.com" target="_blank" class="tool-item" data-search="nsfwyoutube watch without login assiste vídeos sem fazer login">
+                            <h4>NSFWYouTube - Watch Without Login</h4>
+                            <p>Assiste vídeos do YouTube sem fazer login</p>
+                        </a>
+                        <a href="https://apps.apple.com/us/app/ovf-editor/id1478225590" target="_blank" class="tool-item" data-search="ovf editor editor para arquivos ovf no ios">
+                            <h4>OVF Editor</h4>
+                            <p>Editor para arquivos OVF no iOS</p>
+                        </a>
+                        <a href="https://websec.nl/downloads" target="_blank" class="tool-item" data-search="websec downloads ferramentas de segurança e osint para download">
+                            <h4>WebSec Downloads</h4>
+                            <p>Ferramentas de segurança e OSINT para download</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Rastreamento -->
+                <div class="tool-category" data-category="tracking">
+                    <div class="category-header">
+                        <h3><i class="fas fa-map-marker-alt"></i> Rastreamento</h3>
+                        <span class="tool-count" id="tracking-count">16</span>
+                    </div>
+                    <div class="tool-list">
+                        <a href="https://flightaware.com/" target="_blank" class="tool-item" data-search="flightaware rastreamento de voos em tempo real">
+                            <h4>FlightAware</h4>
+                            <p>Rastreamento de voos em tempo real</p>
+                        </a>
+                        <a href="https://www.flightradar24.com/37.78,-121.23/6" target="_blank" class="tool-item" data-search="flightradar24 rastreador de voos em tempo real no mapa">
+                            <h4>Flightradar24</h4>
+                            <p>Rastreador de voos em tempo real no mapa</p>
+                        </a>
+                        <a href="https://www.railyatri.in/live-train-status" target="_blank" class="tool-item" data-search="live train status status de trens em tempo real">
+                            <h4>Live Train Running Status</h4>
+                            <p>Status de trens em tempo real</p>
+                        </a>
+                        <a href="https://grabify.link/?__cf_chl_f_tk=4ztXJz8C9N52dkwJFw3jz4NacJtMaiXcrabvAOraqwM-1651084299-0-gaNycGzNCBE" target="_blank" class="tool-item" data-search="grabify ip logger url shortener logger de ip e encurtador">
+                            <h4>Grabify IP Logger & URL Shortener</h4>
+                            <p>Logger de IP e encurtador de URL</p>
+                        </a>
+                        <a href="https://canarytokens.org/generate" target="_blank" class="tool-item" data-search="canarytokens tokens de monitoramento detectar acesso não autorizado">
+                            <h4>Canarytokens</h4>
+                            <p>Tokens de monitoramento para detectar acesso não autorizado</p>
+                        </a>
+                        <a href="https://www.huntintel.io/" target="_blank" class="tool-item" data-search="hunt intelligence plataforma de inteligência de ameaças">
+                            <h4>Hunt Intelligence</h4>
+                            <p>Plataforma de inteligência de ameaças</p>
+                        </a>
+                        <a href="http://container-tracking.org/" target="_blank" class="tool-item" data-search="container tracking rastreamento de contêineres marítimos">
+                            <h4>Container Tracking</h4>
+                            <p>Rastreamento de contêineres marítimos</p>
+                        </a>
+                        <a href="https://safeairspace.net/" target="_blank" class="tool-item" data-search="safe airspace base de dados de zonas de conflito e risco aéreo">
+                            <h4>Safe Airspace</h4>
+                            <p>Base de dados de zonas de conflito e risco aéreo</p>
+                        </a>
+                        <a href="https://www.broadcastify.com/" target="_blank" class="tool-item" data-search="broadcastify maior fonte mundial transmissões de rádio ao vivo segurança pública">
+                            <h4>Broadcastify</h4>
+                            <p>Maior fonte mundial de transmissões de rádio ao vivo de segurança pública</p>
+                        </a>
+                        <a href="https://crimeisdown.com/" target="_blank" class="tool-item" data-search="crimeisdown ferramentas baseadas em dados monitoramento de crimes chicago">
+                            <h4>CrimeIsDown</h4>
+                            <p>Ferramentas baseadas em dados para monitoramento de crimes em Chicago</p>
+                        </a>
+                        <a href="https://www.marinetraffic.com/en/ais/home/centerx:-12.0/centery:25.0/zoom:4" target="_blank" class="tool-item" data-search="marinetraffic inteligência global de rastreamento de navios">
+                            <h4>MarineTraffic</h4>
+                            <p>Inteligência global de rastreamento de navios</p>
+                        </a>
+                        <a href="https://www.vesselfinder.com/" target="_blank" class="tool-item" data-search="vesselfinder site gratuito de rastreamento de navios via ais">
+                            <h4>VesselFinder</h4>
+                            <p>Site gratuito de rastreamento de navios via AIS</p>
+                        </a>
+                        <a href="https://www.myshiptracking.com/" target="_blank" class="tool-item" data-search="myshiptracking serviço gratuito de rastreamento de navios em tempo real">
+                            <h4>myShipTracking</h4>
+                            <p>Serviço gratuito de rastreamento de navios em tempo real</p>
+                        </a>
+                        <a href="https://www.suncalc.org/" target="_blank" class="tool-item" data-search="suncalc calculadora de posição e fases do sol">
+                            <h4>SunCalc</h4>
+                            <p>Calculadora de posição e fases do sol</p>
+                        </a>
+                        <a href="https://planetcalc.com/1875/" target="_blank" class="tool-item" data-search="shadow length calculator calculadora online de comprimento de sombra">
+                            <h4>Shadow Length Calculator</h4>
+                            <p>Calculadora online de comprimento de sombra</p>
+                        </a>
+                        <a href="https://osint.os-surveillance.io/" target="_blank" class="tool-item" data-search="open source surveillance ferramenta de vigilância de fontes abertas">
+                            <h4>Open Source Surveillance</h4>
+                            <p>Ferramenta de vigilância de fontes abertas</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Web3 -->
+                <div class="tool-category" data-category="web3">
+                    <div class="category-header">
+                        <h3><i class="fas fa-cube"></i> Web3 e Blockchain</h3>
+                        <span class="tool-count" id="web3-count">6</span>
+                    </div>
+                    <div class="tool-list">
+                        <a href="http://Web3.com" target="_blank" class="tool-item" data-search="web3 gateway completo para o ecossistema web3 impulsionado por ia">
+                            <h4>Web3.com</h4>
+                            <p>Gateway completo para o ecossistema Web3 impulsionado por IA</p>
+                        </a>
+                        <a href="https://unstoppabledomains.com/search" target="_blank" class="tool-item" data-search="unstoppable domains busca por domínios web3 com extensões nft crypto wallet">
+                            <h4>Unstoppable Domains</h4>
+                            <p>Busca por domínios Web3 com extensões como .nft, .crypto, .wallet</p>
+                        </a>
+                        <a href="https://d.id/bit/create" target="_blank" class="tool-item" data-search="bit sistema de nomes descentralizado baseado em blockchain">
+                            <h4>.bit</h4>
+                            <p>Sistema de nomes descentralizado baseado em blockchain</p>
+                        </a>
+                        <a href="https://www.namehash.io/" target="_blank" class="tool-item" data-search="namehash infraestrutura para apoiar a adoção global do ens">
+                            <h4>Namehash.io</h4>
+                            <p>Infraestrutura para apoiar a adoção global do ENS</p>
+                        </a>
+                        <a href="https://eth.limo/" target="_blank" class="tool-item" data-search="eth limo torna sites descentralizados acessíveis novamente">
+                            <h4>Eth.limo</h4>
+                            <p>Torna sites descentralizados acessíveis novamente</p>
+                        </a>
+                        <a href="https://viewblock.io/" target="_blank" class="tool-item" data-search="viewblock explorador de blockchain para as massas">
+                            <h4>Viewblock.io</h4>
+                            <p>Explorador de blockchain para as massas</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tradução -->
+                <div class="tool-category" data-category="translation">
+                    <div class="category-header">
+                        <h3><i class="fas fa-language"></i> Tradução</h3>
+                        <span class="tool-count" id="translation-count">3</span>
+                    </div>
+                    <div class="tool-list">
+                        <a href="https://translate.google.com/" target="_blank" class="tool-item" data-search="google translate serviço de tradução automática do google">
+                            <h4>Google Translate</h4>
+                            <p>Serviço de tradução automática do Google</p>
+                        </a>
+                        <a href="https://www.bing.com/translator" target="_blank" class="tool-item" data-search="bing microsoft translator serviço de tradução da microsoft">
+                            <h4>Bing Microsoft Translator</h4>
+                            <p>Serviço de tradução da Microsoft</p>
+                        </a>
+                        <a href="https://www.urbandictionary.com/" target="_blank" class="tool-item" data-search="urban dictionary dicionário colaborativo de gírias e termos urbanos">
+                            <h4>Urban Dictionary</h4>
+                            <p>Dicionário colaborativo de gírias e termos urbanos</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bandeiras, Símbolos e Tatuagens -->
+                <div class="tool-category" data-category="symbols">
+                    <div class="category-header">
+                        <h3><i class="fas fa-flag"></i> Bandeiras, Símbolos e Tatuagens</h3>
+                        <span class="tool-count" id="symbols-count">9</span>
+                    </div>
+                    <div class="tool-list">
+                        <a href="https://www.worldometers.info/geography/flags-of-the-world/" target="_blank" class="tool-item" data-search="flags of the world bandeiras de todos os países do mundo">
+                            <h4>Flags of the World</h4>
+                            <p>Bandeiras de todos os países do mundo</p>
+                        </a>
+                        <a href="http://www.flags.net/" target="_blank" class="tool-item" data-search="world flag database base de dados completa de bandeiras mundiais">
+                            <h4>World Flag Database</h4>
+                            <p>Base de dados completa de bandeiras mundiais</p>
+                        </a>
+                        <a href="https://flagid.org/" target="_blank" class="tool-item" data-search="identify a flag ferramenta para identificação de bandeiras">
+                            <h4>Identify a Flag</h4>
+                            <p>Ferramenta para identificação de bandeiras</p>
+                        </a>
+                        <a href="https://flagpedia.net/organization" target="_blank" class="tool-item" data-search="flags of international organizations bandeiras de organizações internacionais">
+                            <h4>Flags of International Organizations</h4>
+                            <p>Bandeiras de organizações internacionais</p>
+                        </a>
+                        <a href="https://www.northstarflags.com/club-and-organizational-flags.html" target="_blank" class="tool-item" data-search="club organizational flags bandeiras de clubes e organizações">
+                            <h4>Club and Organizational Flags</h4>
+                            <p>Bandeiras de clubes e organizações</p>
+                        </a>
+                        <a href="https://zimmer.fresnostate.edu/~haralds/htmlfiles/gang-signs.html" target="_blank" class="tool-item" data-search="gang signs sinais de gangues e seus significados">
+                            <h4>Gang Signs</h4>
+                            <p>Sinais de gangues e seus significados</p>
+                        </a>
+                        <a href="https://thestyleup.com/gang-tattoos/" target="_blank" class="tool-item" data-search="gang tattoos tatuagens de gangues mais conhecidas e seus significados">
+                            <h4>100 Most Notorious Gang Tattoos</h4>
+                            <p>Tatuagens de gangues mais conhecidas e seus significados</p>
+                        </a>
+                        <a href="https://www.tattoodo.com/" target="_blank" class="tool-item" data-search="tattoodo plataforma global de tatuagens">
+                            <h4>Tattoodo</h4>
+                            <p>Plataforma global de tatuagens</p>
+                        </a>
+                        <a href="https://tattooswizard.com/artists" target="_blank" class="tool-item" data-search="tattoos wizard artists directory diretório de tatuadores e estúdios">
+                            <h4>Tattoos Wizard - Artists Directory</h4>
+                            <p>Diretório de tatuadores e estúdios</p>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Aviso Legal -->
+            <div style="margin-top: 3rem; padding: 2rem; background: rgba(255, 193, 7, 0.1); border: 1px solid rgba(255, 193, 7, 0.3); border-radius: 12px;">
+                <h3 style="color: #ffc107; margin-bottom: 1rem;">⚠️ Aviso Legal Importante</h3>
+                <p style="color: #fff; margin-bottom: 1rem;">
+                    Esta coleção de ferramentas é fornecida exclusivamente para fins educacionais e informativos. 
+                    A Scorpion Intelligence não tem afiliação com as ferramentas listadas e não se responsabiliza por:
+                </p>
+                <ul style="color: #cbd5e0; margin-bottom: 1rem;">
+                    <li>Disponibilidade, funcionalidade ou conteúdo das ferramentas externas</li>
+                    <li>Uso inadequado ou ilegal das ferramentas por parte dos usuários</li>
+                    <li>Violações de termos de uso dos serviços de terceiros</li>
+                    <li>Danos ou consequências resultantes do uso das ferramentas</li>
+                </ul>
+                <p style="color: #fff; font-weight: 600;">
+                    Sempre use essas ferramentas de forma ética, legal e de acordo com os termos de serviço de cada plataforma. 
+                    Em caso de dúvidas sobre legalidade ou ética no uso de qualquer ferramenta, consulte nossos especialistas.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="about" style="padding-top:60px; padding-bottom:60px;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Precisa de Consultoria Especializada?</h2>
+                <p>Nossos especialistas podem ajudar você a escolher e utilizar as melhores ferramentas para suas investigações</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Esta base de ferramentas representa apenas o início. Para investigações complexas, análises especializadas ou consultoria em OSINT, nossa equipe está pronta para oferecer soluções personalizadas que vão além do que ferramentas isoladas podem fornecer.</p>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="index.html#contact" class="btn btn-primary">Entrar em contato</a>
+                        <a href="index.html#services" class="btn btn-secondary" style="margin-left:0.5rem;">Ver nossos serviços</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-search"></i>
+                        <span>SCORPION Intelligence</span>
+                    </div>
+                    <p>Especialistas em OSINT para advogados e empresas</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="index.html#home" style="color:#cbd5e0;text-decoration:none;">Início</a></li>
+                        <li><a href="index.html#services" style="color:#cbd5e0;text-decoration:none;">Serviços</a></li>
+                        <li><a href="ferramentas.html" style="color:#cbd5e0;text-decoration:none;">Stack</a></li>
+                        <li><a href="ferramentas-completas.html" style="color:#cbd5e0;text-decoration:none;">Base de Ferramentas</a></li>
+                        <li><a href="index.html#contact" style="color:#cbd5e0;text-decoration:none;">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>Email: juliocamposmachado@gmail.com</p>
+                    <p>WhatsApp: +55 11 99294-6628</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Scorpion Intelligence - Like Look Solutions. Todos os direitos reservados.</p>
+                <p>CNPJ: 36.992.198/0001-84</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Search functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const toolItems = document.querySelectorAll('.tool-item');
+            const toolCategories = document.querySelectorAll('.tool-category');
+
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase().trim();
+                let visibleCategories = 0;
+
+                toolCategories.forEach(category => {
+                    let visibleItemsInCategory = 0;
+                    const itemsInCategory = category.querySelectorAll('.tool-item');
+                    
+                    itemsInCategory.forEach(item => {
+                        const searchData = item.getAttribute('data-search').toLowerCase();
+                        
+                        if (searchTerm === '' || searchData.includes(searchTerm)) {
+                            item.classList.remove('hidden');
+                            visibleItemsInCategory++;
+                        } else {
+                            item.classList.add('hidden');
+                        }
+                    });
+
+                    // Update category count
+                    const countSpan = category.querySelector('.tool-count');
+                    if (countSpan) {
+                        countSpan.textContent = visibleItemsInCategory;
+                    }
+
+                    // Hide/show category based on visible items
+                    if (visibleItemsInCategory > 0 || searchTerm === '') {
+                        category.classList.remove('hidden');
+                        visibleCategories++;
+                    } else {
+                        category.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // Mobile navigation
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,710 @@
+{
+  "toolsDatabase": {
+    "disposableGamesStudio": [
+      {
+        "title": "Disposablegamesstudio.mydurable.com",
+        "url": "https://disposablegamesstudio.mydurable.com/",
+        "description": "Website principal da Disposable Games Studio"
+      },
+      {
+        "title": "Disposablegamesstudio.weebly.com (OLD)",
+        "url": "https://disposablegamesstudio.weebly.com/",
+        "description": "Website antigo da Disposable Games Studio"
+      },
+      {
+        "title": "Stream Deck Key Creator",
+        "url": "https://www.elgato.com/en/keycreator",
+        "description": "Ferramenta para criar teclas personalizadas do Stream Deck"
+      },
+      {
+        "title": "DisposableGamesStudio | Whyp",
+        "url": "https://www.whyp.it/users/11959/disposablegamesstudio",
+        "description": "Perfil no Whyp da Disposable Games Studio"
+      },
+      {
+        "title": "Mobile OSINT mind maps.com",
+        "url": "https://drive.google.com/drive/folders/1iAmlRoxcNcUBHtNXSDTtjO0FmhS3nv97?usp=share_link",
+        "description": "Mapas mentais sobre OSINT móvel"
+      },
+      {
+        "title": "Amaryllo Cloud | Your Own Private Cloud",
+        "url": "https://cloud.amaryllo.us/",
+        "description": "Solução de armazenamento em nuvem privada simples e acessível"
+      },
+      {
+        "title": "OSINT-Templates",
+        "url": "https://drive.google.com/drive/folders/1xRayX4PU4Nswkf9juKEp-wa6CZJ8CtTq?usp=drive_link",
+        "description": "Templates para investigações OSINT"
+      },
+      {
+        "title": "Disposablegames.studio",
+        "url": "https://www.disposablegames.studio",
+        "description": "Website atual da Disposable Games Studio"
+      }
+    ],
+    "searches": [
+      {
+        "title": "Google Advanced Search",
+        "url": "https://www.google.com/advanced_search",
+        "description": "Página de pesquisa avançada do Google"
+      },
+      {
+        "title": "Bing",
+        "url": "https://bing.com/?startme",
+        "description": "Motor de busca Bing da Microsoft"
+      },
+      {
+        "title": "Google Trends",
+        "url": "https://trends.google.com/trends/?geo=US",
+        "description": "Ferramenta para analisar tendências de busca do Google"
+      },
+      {
+        "title": "Qwant",
+        "url": "https://www.qwant.com/",
+        "description": "Motor de busca europeu que respeita a privacidade"
+      },
+      {
+        "title": "i search from",
+        "url": "http://isearchfrom.com/",
+        "description": "Ferramenta para simular buscas de diferentes localidades"
+      },
+      {
+        "title": "jakejarvis/awesome-shodan-queries",
+        "url": "https://github.com/jakejarvis/awesome-shodan-queries",
+        "description": "Coleção de queries interessantes para o Shodan.io"
+      },
+      {
+        "title": "Programmable Search Engine by Google",
+        "url": "https://programmablesearchengine.google.com/about/",
+        "description": "Ferramenta para criar mecanismos de busca personalizados"
+      },
+      {
+        "title": "Baidu",
+        "url": "https://www.baidu.com/",
+        "description": "Principal motor de busca chinês"
+      },
+      {
+        "title": "Yandex",
+        "url": "https://yandex.com/",
+        "description": "Motor de busca russo com tecnologia de machine learning"
+      },
+      {
+        "title": "Shodan",
+        "url": "https://www.shodan.io/",
+        "description": "Motor de busca para dispositivos conectados à internet"
+      },
+      {
+        "title": "Shodan Search Engine Advance Search",
+        "url": "https://www.shodan.io/search/advanced",
+        "description": "Página de busca avançada do Shodan"
+      },
+      {
+        "title": "Shodan Dorks for Advanced OSINT",
+        "url": "https://github.com/H4ckD4d/Shodan-Dorks-for-Advanced-OSINT",
+        "description": "Dorks do Shodan para OSINT avançado"
+      },
+      {
+        "title": "Hackyx",
+        "url": "https://hackyx.io/",
+        "description": "Plataforma de ferramentas de hacking ético"
+      },
+      {
+        "title": "Discovery",
+        "url": "https://copyseeker.net/discovery",
+        "description": "Ferramenta de descoberta e análise de conteúdo"
+      },
+      {
+        "title": "Vecteezy",
+        "url": "https://www.vecteezy.com/",
+        "description": "Banco de imagens, vetores e recursos gráficos gratuitos"
+      },
+      {
+        "title": "International Google Search Engine",
+        "url": "https://internationalpeoplesearch.com/free-international-people-search/international-google-search-engine.html",
+        "description": "Ferramenta para busca internacional no Google"
+      },
+      {
+        "title": "dedigger",
+        "url": "https://www.dedigger.com/#gsc.tab=0",
+        "description": "Ferramenta para encontrar arquivos públicos no Google Drive"
+      },
+      {
+        "title": "NAPALM FTP Indexer",
+        "url": "https://www.searchftps.net/",
+        "description": "Indexador e motor de busca para servidores FTP"
+      },
+      {
+        "title": "National Archives and Records Administration",
+        "url": "https://www.archives.gov/",
+        "description": "Arquivo Nacional dos Estados Unidos"
+      },
+      {
+        "title": "Deep Dork",
+        "url": "https://guilherme-moraiss.github.io/Deep-Dork-Web/",
+        "description": "Ferramenta avançada para Google Dorking"
+      },
+      {
+        "title": "DorkGenius",
+        "url": "https://dorkgenius.com/",
+        "description": "Gerador de queries de busca customizadas usando IA"
+      },
+      {
+        "title": "Bug Bounty Dork Generator",
+        "url": "https://start.me/p/6rOGjm/osint",
+        "description": "Página start.me com recursos OSINT"
+      },
+      {
+        "title": "Meta OSINT",
+        "url": "https://metaosint.github.io/table",
+        "description": "Ferramenta para identificar recursos OSINT relevantes rapidamente"
+      },
+      {
+        "title": "Analystresearchtools.com",
+        "url": "https://analystresearchtools.com/",
+        "description": "Conjunto de ferramentas de pesquisa para analistas"
+      },
+      {
+        "title": "Make your search impersonal on Google and see results from other countries",
+        "url": "https://impersonal.me/",
+        "description": "Ferramenta para buscar no Google de diferentes países e idiomas"
+      },
+      {
+        "title": "App.sherlockeye.io",
+        "url": "https://app.sherlockeye.io/",
+        "description": "Plataforma de investigação OSINT"
+      },
+      {
+        "title": "Meawfy",
+        "url": "https://meawfy.com/",
+        "description": "Motor de busca avançado para arquivos do Mega.nz"
+      },
+      {
+        "title": "OSINT Investigation Assistant",
+        "url": "https://lambda.black/osint.html",
+        "description": "Assistente para investigações OSINT focado em pessoas"
+      },
+      {
+        "title": "The OSINT Rack – Mario Santella",
+        "url": "https://www.mariosantella.com/the-osint-rack/",
+        "description": "Coleção curada de recursos OSINT categorizados"
+      },
+      {
+        "title": "Predicta Graph",
+        "url": "https://www.predictagraph.com/",
+        "description": "Ferramenta de análise preditiva e visualização de dados"
+      },
+      {
+        "title": "Oathnet.org",
+        "url": "https://oathnet.org/",
+        "description": "Rede e recursos para profissionais de OSINT"
+      }
+    ],
+    "web3": [
+      {
+        "title": "Web3.com",
+        "url": "http://Web3.com",
+        "description": "Gateway completo para o ecossistema Web3 impulsionado por IA"
+      },
+      {
+        "title": "Unstoppable Domains",
+        "url": "https://unstoppabledomains.com/search",
+        "description": "Busca por domínios Web3 com extensões como .nft, .crypto, .wallet"
+      },
+      {
+        "title": ".bit",
+        "url": "https://d.id/bit/create",
+        "description": "Sistema de nomes descentralizado baseado em blockchain"
+      },
+      {
+        "title": "Namehash.io",
+        "url": "https://www.namehash.io/",
+        "description": "Infraestrutura para apoiar a adoção global do ENS"
+      },
+      {
+        "title": "Eth.limo",
+        "url": "https://eth.limo/",
+        "description": "Torna sites descentralizados acessíveis novamente"
+      },
+      {
+        "title": "Viewblock.io",
+        "url": "https://viewblock.io/",
+        "description": "Explorador de blockchain para as massas"
+      }
+    ],
+    "socialMedia": [
+      {
+        "title": "Reddit",
+        "url": "https://www.reddit.com/",
+        "description": "Plataforma de discussão e agregação de notícias"
+      },
+      {
+        "title": "TikTok",
+        "url": "https://www.tiktok.com/en/",
+        "description": "Plataforma de vídeos curtos"
+      },
+      {
+        "title": "Twitter/X",
+        "url": "https://twitter.com/home",
+        "description": "Rede social de microblogging"
+      },
+      {
+        "title": "Facebook",
+        "url": "https://www.facebook.com/",
+        "description": "Maior rede social do mundo"
+      },
+      {
+        "title": "Post.news",
+        "url": "https://post.news/?r=TEz8w",
+        "description": "Plataforma de notícias e discussões"
+      },
+      {
+        "title": "Craigslist",
+        "url": "https://craigslist.org",
+        "description": "Classificados online e anúncios locais"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/",
+        "description": "Rede social profissional"
+      },
+      {
+        "title": "TRUTH Social",
+        "url": "https://truthsocial.com/",
+        "description": "Plataforma de mídia social"
+      },
+      {
+        "title": "Bluesky Social",
+        "url": "https://bsky.app/",
+        "description": "Rede social descentralizada"
+      },
+      {
+        "title": "Mastodon",
+        "url": "https://joinmastodon.org/",
+        "description": "Plataforma de mídia social descentralizada, gratuita e open-source"
+      },
+      {
+        "title": "Snapchat",
+        "url": "https://www.snapchat.com/",
+        "description": "Aplicativo de mensagens com fotos e vídeos temporários"
+      },
+      {
+        "title": "Instagram",
+        "url": "https://www.instagram.com/",
+        "description": "Plataforma de compartilhamento de fotos e vídeos"
+      },
+      {
+        "title": "Telegram",
+        "url": "https://telegram.org/",
+        "description": "Aplicativo de mensagens rápido, seguro e poderoso"
+      },
+      {
+        "title": "Telegram Channels List",
+        "url": "https://tlgrm.eu/channels",
+        "description": "Diretório de canais interessantes do Telegram"
+      },
+      {
+        "title": "Discord",
+        "url": "https://discord.com/",
+        "description": "Plataforma de comunicação por voz, vídeo e texto"
+      },
+      {
+        "title": "Skype",
+        "url": "https://www.skype.com/en/",
+        "description": "Serviço de videochamadas e mensagens"
+      },
+      {
+        "title": "Trillian",
+        "url": "https://trillian.im/",
+        "description": "Cliente de mensagens instantâneas compatível com HIPAA"
+      },
+      {
+        "title": "Session",
+        "url": "https://getsession.org/",
+        "description": "Mensageiro privado que remove chances de coleta de metadados"
+      },
+      {
+        "title": "Hive",
+        "url": "https://hive.com/",
+        "description": "Plataforma de produtividade para equipes ágeis"
+      },
+      {
+        "title": "Plurk",
+        "url": "https://www.plurk.com/portal/",
+        "description": "Plataforma de microblogging social"
+      },
+      {
+        "title": "Kik",
+        "url": "https://kik.com/",
+        "description": "Aplicativo de mensagens conectando o mundo através do chat"
+      },
+      {
+        "title": "Kick.com",
+        "url": "https://kick.com/social",
+        "description": "Plataforma de streaming e social"
+      },
+      {
+        "title": "Urban Dictionary",
+        "url": "https://www.urbandictionary.com/",
+        "description": "Dicionário colaborativo de gírias e termos urbanos"
+      },
+      {
+        "title": "WeChat",
+        "url": "https://www.wechat.com/",
+        "description": "Aplicativo multi-plataforma de mensagens com suporte a voz, foto, vídeo e texto"
+      },
+      {
+        "title": "Fiverr",
+        "url": "https://www.fiverr.com/",
+        "description": "Marketplace de serviços freelancer"
+      },
+      {
+        "title": "Kbin.social",
+        "url": "https://kbin.social/",
+        "description": "Plataforma para explorar o Fediverso"
+      },
+      {
+        "title": "Social Searcher",
+        "url": "https://www.social-searcher.com/",
+        "description": "Ferramenta de monitoramento de menções em redes sociais e web"
+      }
+    ],
+    "socialMediaTools": [
+      {
+        "title": "instantusername",
+        "url": "https://instantusername.com/",
+        "description": "Verifica disponibilidade de nomes de usuário em múltiplas plataformas"
+      },
+      {
+        "title": "Who posted what?",
+        "url": "https://whopostedwhat.com/",
+        "description": "Ferramenta de busca avançada para Facebook"
+      },
+      {
+        "title": "Ashley Madison hacked email checker",
+        "url": "https://ashley.cynic.al/",
+        "description": "Verifica se um email foi exposto no hack da Ashley Madison"
+      },
+      {
+        "title": "YT5s.com - YouTube Downloader",
+        "url": "https://yt5s.com/en87",
+        "description": "Downloader de vídeos do YouTube e conversor para MP3"
+      },
+      {
+        "title": "Namevine",
+        "url": "https://namevine.com/",
+        "description": "Ferramenta de busca de nomes de usuário"
+      },
+      {
+        "title": "Facebook Custom Search Engine",
+        "url": "http://www.uvrx.com/facebook.html",
+        "description": "Motor de busca personalizado para Facebook"
+      },
+      {
+        "title": "NSFWYouTube - Watch Without Login",
+        "url": "https://nsfwyoutube.com",
+        "description": "Assiste vídeos do YouTube sem fazer login"
+      },
+      {
+        "title": "Social Media Auditor - SPEAKRJ",
+        "url": "https://www.speakrj.com/audit/",
+        "description": "Auditor de estatísticas de redes sociais"
+      },
+      {
+        "title": "Pixwox Instagram Viewer",
+        "url": "https://www.pixwox.com/profile/therock/",
+        "description": "Visualizador de perfis do Instagram (substituir nome do usuário)"
+      },
+      {
+        "title": "imginn",
+        "url": "https://imginn.com/",
+        "description": "Visualizador anônimo de perfis e stories do Instagram"
+      },
+      {
+        "title": "Social Network Visualizer",
+        "url": "https://socnetv.org/downloads",
+        "description": "Software para análise e visualização de redes sociais"
+      },
+      {
+        "title": "HEAVY.AI TweetMap",
+        "url": "https://www.heavy.ai/demos/tweetmap",
+        "description": "Visualizador de tweets em tempo real no mapa"
+      },
+      {
+        "title": "Username Search - IDCrawl",
+        "url": "https://www.idcrawl.com/username",
+        "description": "Busca de nomes de usuário em múltiplas plataformas"
+      },
+      {
+        "title": "OVF Editor",
+        "url": "https://apps.apple.com/us/app/ovf-editor/id1478225590",
+        "description": "Editor para arquivos OVF no iOS"
+      },
+      {
+        "title": "Best Telegram OSINT Tools",
+        "url": "https://www.theinvestigator.blog/blog/telegram-osint-investigations",
+        "description": "Melhores ferramentas online para investigações no Telegram"
+      },
+      {
+        "title": "Lyzem - Telegram Search",
+        "url": "https://lyzem.com/",
+        "description": "Motor de busca para blogs e Telegram"
+      },
+      {
+        "title": "Bypass YouTube Age Restriction",
+        "url": "https://deturl.com/bypass-youtube-age-restriction-login-requirement.html",
+        "description": "Contorna restrições de idade do YouTube sem login"
+      },
+      {
+        "title": "WebSec Downloads",
+        "url": "https://websec.nl/downloads",
+        "description": "Ferramentas de segurança e OSINT para download"
+      },
+      {
+        "title": "Hoaxy: How claims spread online",
+        "url": "https://hoaxy.osome.iu.edu/",
+        "description": "Visualiza a propagação de informações no Twitter"
+      },
+      {
+        "title": "YouTube Geographic Search",
+        "url": "https://mattw.io/youtube-geofind/location",
+        "description": "Busca vídeos do YouTube por localização geográfica"
+      },
+      {
+        "title": "Locoloader",
+        "url": "https://www.locoloader.com/",
+        "description": "Downloader de vídeos, música e fotos de sites populares"
+      },
+      {
+        "title": "nexfil - Social Media OSINT",
+        "url": "https://github.com/thewhiteh4t/nexfil",
+        "description": "Ferramenta OSINT para encontrar perfis em redes sociais"
+      },
+      {
+        "title": "socialscan",
+        "url": "https://github.com/iojw/socialscan",
+        "description": "Verifica disponibilidade de email/username em sites sociais"
+      },
+      {
+        "title": "DetectDee",
+        "url": "https://github.com/piaolin/DetectDee",
+        "description": "Encontra contas de redes sociais por username, email ou telefone"
+      },
+      {
+        "title": "Moriarty-Project",
+        "url": "https://github.com/AzizKpln/Moriarty-Project",
+        "description": "Ferramenta de reconhecimento e OSINT"
+      },
+      {
+        "title": "Th3inspector",
+        "url": "https://github.com/Moham3dRiahi/Th3inspector",
+        "description": "Ferramenta completa de reconhecimento e OSINT"
+      },
+      {
+        "title": "WhatsMyName-Python",
+        "url": "https://github.com/C3n7ral051nt4g3ncy/WhatsMyName-Python",
+        "description": "Script Python para verificar nomes de usuário em sites"
+      },
+      {
+        "title": "social-analyzer",
+        "url": "https://github.com/qeeqbox/social-analyzer",
+        "description": "API, CLI e Web App para analisar perfis em 1000+ sites de redes sociais"
+      },
+      {
+        "title": "Username Search - UserSearch.org",
+        "url": "https://usersearch.org/",
+        "description": "Busca por username ou email em 600+ redes sociais e sites de relacionamento"
+      },
+      {
+        "title": "YouTube Metadata Extractor",
+        "url": "https://www.toolsoverflow.com/youtube/youtube-title-description-extractor",
+        "description": "Extrator de descrição e metadados de vídeos do YouTube"
+      },
+      {
+        "title": "Facebook Video Downloader - FDown",
+        "url": "https://www.fdown.net/",
+        "description": "Downloader online de vídeos do Facebook"
+      },
+      {
+        "title": "Facebook Video Downloader - Publer",
+        "url": "https://publer.io/tools/facebook-video-downloader",
+        "description": "Downloader de vídeos do Facebook em HD"
+      },
+      {
+        "title": "Socialblade",
+        "url": "https://socialblade.com/",
+        "description": "Estatísticas de YouTube, Twitch, Instagram e muito mais"
+      },
+      {
+        "title": "internect.info",
+        "url": "https://internect.info/",
+        "description": "Informações técnicas sobre contas do Bluesky"
+      },
+      {
+        "title": "Instagram Anonymous Story Viewer",
+        "url": "https://insta-stories-viewer.com/",
+        "description": "Visualizador anônimo de stories do Instagram"
+      },
+      {
+        "title": "usersearch.ai",
+        "url": "https://usersearch.ai/",
+        "description": "Busca inteligente de usuários usando IA"
+      },
+      {
+        "title": "Profile Image Intel",
+        "url": "https://profileimageintel.com/",
+        "description": "Descobre quando fotos de perfil foram enviadas no Instagram, Facebook e WhatsApp"
+      },
+      {
+        "title": "SilverInstaEye: Instagram OSINT Tool",
+        "url": "https://darkwebinformer.com/silverinstaeye-a-comprehensive-osint-tool-for-instagram/",
+        "description": "Ferramenta OSINT abrangente para Instagram"
+      }
+    ],
+    "translate": [
+      {
+        "title": "Google Translate",
+        "url": "https://translate.google.com/",
+        "description": "Serviço de tradução automática do Google"
+      },
+      {
+        "title": "Bing Microsoft Translator",
+        "url": "https://www.bing.com/translator",
+        "description": "Serviço de tradução da Microsoft"
+      },
+      {
+        "title": "Urban Dictionary",
+        "url": "https://www.urbandictionary.com/",
+        "description": "Dicionário colaborativo de gírias e termos urbanos"
+      }
+    ],
+    "flagsSymbolsTattoos": [
+      {
+        "title": "Flags of the World",
+        "url": "https://www.worldometers.info/geography/flags-of-the-world/",
+        "description": "Bandeiras de todos os países do mundo"
+      },
+      {
+        "title": "World Flag Database",
+        "url": "http://www.flags.net/",
+        "description": "Base de dados completa de bandeiras mundiais"
+      },
+      {
+        "title": "Identify a Flag",
+        "url": "https://flagid.org/",
+        "description": "Ferramenta para identificação de bandeiras"
+      },
+      {
+        "title": "Flags of international organizations",
+        "url": "https://flagpedia.net/organization",
+        "description": "Bandeiras de organizações internacionais"
+      },
+      {
+        "title": "Club and Organizational Flags",
+        "url": "https://www.northstarflags.com/club-and-organizational-flags.html",
+        "description": "Bandeiras de clubes e organizações"
+      },
+      {
+        "title": "Gang Signs",
+        "url": "https://zimmer.fresnostate.edu/~haralds/htmlfiles/gang-signs.html",
+        "description": "Sinais de gangues e seus significados"
+      },
+      {
+        "title": "100 Most Notorious Gang Tattoos & Their Meanings",
+        "url": "https://thestyleup.com/gang-tattoos/",
+        "description": "Tatuagens de gangues mais conhecidas e seus significados"
+      },
+      {
+        "title": "Tattoodo",
+        "url": "https://www.tattoodo.com/",
+        "description": "Plataforma global de tatuagens"
+      },
+      {
+        "title": "Tattoos Wizard - Artists Directory",
+        "url": "https://tattooswizard.com/artists",
+        "description": "Diretório de tatuadores e estúdios"
+      }
+    ],
+    "tracking": [
+      {
+        "title": "FlightAware",
+        "url": "https://flightaware.com/",
+        "description": "Rastreamento de voos em tempo real"
+      },
+      {
+        "title": "Flightradar24",
+        "url": "https://www.flightradar24.com/37.78,-121.23/6",
+        "description": "Rastreador de voos em tempo real no mapa"
+      },
+      {
+        "title": "Live Train Running Status",
+        "url": "https://www.railyatri.in/live-train-status",
+        "description": "Status de trens em tempo real"
+      },
+      {
+        "title": "Grabify IP Logger & URL Shortener",
+        "url": "https://grabify.link/?__cf_chl_f_tk=4ztXJz8C9N52dkwJFw3jz4NacJtMaiXcrabvAOraqwM-1651084299-0-gaNycGzNCBE",
+        "description": "Logger de IP e encurtador de URL"
+      },
+      {
+        "title": "Canarytokens",
+        "url": "https://canarytokens.org/generate",
+        "description": "Tokens de monitoramento para detectar acesso não autorizado"
+      },
+      {
+        "title": "Hunt Intelligence",
+        "url": "https://www.huntintel.io/",
+        "description": "Plataforma de inteligência de ameaças"
+      },
+      {
+        "title": "Container Tracking",
+        "url": "http://container-tracking.org/",
+        "description": "Rastreamento de contêineres marítimos"
+      },
+      {
+        "title": "Safe Airspace",
+        "url": "https://safeairspace.net/",
+        "description": "Base de dados de zonas de conflito e risco aéreo"
+      },
+      {
+        "title": "Broadcastify",
+        "url": "https://www.broadcastify.com/",
+        "description": "Maior fonte mundial de transmissões de rádio ao vivo de segurança pública"
+      },
+      {
+        "title": "CrimeIsDown",
+        "url": "https://crimeisdown.com/",
+        "description": "Ferramentas baseadas em dados para monitoramento de crimes em Chicago"
+      },
+      {
+        "title": "MarineTraffic",
+        "url": "https://www.marinetraffic.com/en/ais/home/centerx:-12.0/centery:25.0/zoom:4",
+        "description": "Inteligência global de rastreamento de navios"
+      },
+      {
+        "title": "VesselFinder",
+        "url": "https://www.vesselfinder.com/",
+        "description": "Site gratuito de rastreamento de navios via AIS"
+      },
+      {
+        "title": "myShipTracking",
+        "url": "https://www.myshiptracking.com/",
+        "description": "Serviço gratuito de rastreamento de navios em tempo real"
+      },
+      {
+        "title": "SunCalc",
+        "url": "https://www.suncalc.org/",
+        "description": "Calculadora de posição e fases do sol"
+      },
+      {
+        "title": "Shadow Length Calculator",
+        "url": "https://planetcalc.com/1875/",
+        "description": "Calculadora online de comprimento de sombra"
+      },
+      {
+        "title": "Open Source Surveillance",
+        "url": "https://osint.os-surveillance.io/",
+        "description": "Ferramenta de vigilância de fontes abertas"
+      }
+    ]
+  }
+}
